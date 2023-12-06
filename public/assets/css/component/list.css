@@ -1,0 +1,95 @@
+.fix-width {
+    /*border: 1px solid;*/
+    width: 1100px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+body.inactive .fix-width{
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    border: 1px solid;
+    max-width: none;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+}
+.table tr{
+    border: 1px solid;
+}
+.panel {
+    padding: 15px;
+}
+table thead th{
+    border: 1px solid;
+    font-size: 15px;
+    white-space: nowrap;
+}
+table thead tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+table thead{
+    border: 1px solid;
+}
+table tbody tr td{
+    font-size: 15px;
+    border: 1px solid;
+    white-space: nowrap;
+}
+table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+input[type="file"]{
+    font-size: 15px;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+input[type='file']::file-selector-button{
+    font-size: 15px;
+    height: fit-content;
+}
+table th,
+table td {
+    padding: 12px 15px;
+}
+button {
+    font-size: 15px;
+    background-color: #009879;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Gaya saat tombol dihover */
+button:hover {
+    background-color: #45a049;
+}
+.td-a-linked{
+    text-align: center;
+}
+a:focus,
+a:hover {
+    border-bottom: 1px solid;
+}
+
+a:active {
+    color: red;
+}

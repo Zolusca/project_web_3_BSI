@@ -1,0 +1,47 @@
+.grid{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-rows: 1.4fr;
+    gap: 10px 10px;
+    grid-template-areas:
+    "kiri kanan";
+}
+.kanan { grid-area: kanan; }
+.kiri { grid-area: kiri; }
+
+form{
+    margin: auto;
+    border: 1px solid;
+    width: 500px;
+}
+
+label{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+input[type='text']{
+    border-radius: 5px;
+    background-color: white;
+    font-size: 17px;
+}
+input[type='email']{
+    border-radius: 5px;
+    background-color: white;
+    font-size: 17px;
+}
+input[type='number']{
+    border-radius: 5px;
+    background-color: white;
+    font-size: 17px;
+}
+button[type='submit']{
+    margin-top: 15px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+}

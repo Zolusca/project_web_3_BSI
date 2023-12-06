@@ -1,0 +1,28 @@
+.fix-width {
+    width: 1100px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+body.inactive .fix-width{
+    width: fit-content;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+table{
+    margin: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    border-collapse: collapse;
+}
+table td{
+    min-width: 50px;
+    padding-top:3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+}
+table tr{
+    border: 1px solid;
+}
+

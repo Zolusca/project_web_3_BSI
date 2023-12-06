@@ -1,0 +1,43 @@
+.fix-width {
+    border: 1px solid;
+    width: 990px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    margin-bottom: 0;
+    max-width: none;
+}
+
+.panel {
+    padding: 15px;
+}
+table thead th{
+    font-size: 15px;
+    white-space: nowrap;
+}
+table tbody tr td{
+    font-size: 15px;
+    white-space: nowrap;
+}
+button{
+    white-space: nowrap;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 15px;
+}
+input[type="file"]{
+    font-size: 15px;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+input[type='file']::file-selector-button{
+    font-size: 15px;
+    height: fit-content;
+}

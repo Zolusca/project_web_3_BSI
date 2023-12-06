@@ -1,0 +1,23 @@
+.container-card-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.card-content{
+    border: 1px solid;
+    border-radius: 10px;
+    width:200px ;
+    height:60px ;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+.card-content i{
+    float: right;
+}
+.container-data-above-card{
+    border: 1px solid;
+    margin-top: 15px;
+    height: 450px;
+}

@@ -1,0 +1,10 @@
+#ignore log
+
+writable/logs/*.log
+writable/session/ci_session*
+writable/debugbar/debugbar_*
+build/logs/
+*.png
+*.jpg
+gmail-client-secret.json
+
