@@ -11,23 +11,23 @@
     <div class="container-card-area">
 
         <div class="card-content"><!----card-content------>
-            <div class="title-card">Jumlah Produk</div>
+            <div class="title-card">Jumlah Order</div>
             <div>
-                <b>90</b>
+                <b><?= $data['jumlah_order']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="card-content"><!----card-content------>
-            <div class="title-card">Jumlah Produk</div>
+            <div class="title-card">Transaksi Belum Lunas</div>
             <div>
-                <b>90</b>
+                <b><?= $data['transaksi_belum_lunas']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="card-content"><!----card-content------>
-            <div class="title-card">Jumlah Produk</div>
+            <div class="title-card">Transaksi Lunas</div>
             <div>
-                <b>90</b>
+                <b><?= $data['transaksi_lunas']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>

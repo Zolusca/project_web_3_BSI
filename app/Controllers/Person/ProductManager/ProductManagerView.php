@@ -22,15 +22,22 @@ class ProductManagerView extends BaseController
     public static function listNamaIdPenyalur(array $dataPenyalur){
         $listData=[];
         foreach ($dataPenyalur as $index=>$value){
-            $listData[$index]=['id'=>$value->id_penyalur,'nama_penyalur'=>$value->nama];
+            $listData[$index]=['id'=>$value['id_penyalur'],'nama_penyalur'=>$value['nama']];
         }
         return $listData;
     }
 
     public function mainDashboardView(){
+        $produkModel = new Produk(Services::getDatabaseConnection());
+        $orderTempModel = new TemporaryOrder(Services::getDatabaseConnection());
+        $orderModel     = new Orders(Services::getDatabaseConnection());
+
         return view('DashboardManagerProduk/General/beranda_dashboard',
             ['data'=>[
                 'user'=>['nama_user'=>session()->get('nama'),'role'=>session()->get('role')],
+                'jumlah_produk'=>$produkModel->countAllResults(),
+                'jumlah_new_request_temp'=>$orderTempModel->orderBy('tanggal_request_order_dibuat','asc')->countAllResults(),
+                'jumlah_order_disetujui'=>$orderModel->where('status_order','disetujui')->countAllResults()
             ]]
         );
     }

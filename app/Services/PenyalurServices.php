@@ -53,7 +53,7 @@ class PenyalurServices
         }
     }
     public function getAllPenyalur(){
-        return $this->penyalurModel->findAll();
+        return $this->penyalurModel->asArray()->findAll();
     }
 
 }

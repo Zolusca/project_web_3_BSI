@@ -6,5 +6,5 @@ writable/debugbar/debugbar_*
 build/logs/
 *.png
 *.jpg
-gmail-client-secret.json
+gmail_secret.json
 

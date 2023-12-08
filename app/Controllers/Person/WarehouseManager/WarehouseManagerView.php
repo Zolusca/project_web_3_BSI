@@ -12,9 +12,19 @@ use Config\Services;
 class WarehouseManagerView extends BaseController
 {
     public function mainDashboardView(){
+        $gudangModel    = new Gudang(Services::getDatabaseConnection());
+        $orderModel     = new Orders(Services::getDatabaseConnection());
+        $tempModel      = new TemporaryOrder(Services::getDatabaseConnection());
+
         return view('DashboardManagerWarehouse/General/beranda_dashboard',
             ['data'=>[
                 'user'=>['nama_user'=>session()->get('nama'),'role'=>session()->get('role')],
+                'jumlah_produk'=>$gudangModel->countAllResults(),
+                'jumlah_order'=>$orderModel->where('status_order','disetujui')
+                                            ->join('transaksi','transaksi.id_order = orders.id_order')
+                                            ->where('status_transaksi','lunas')
+                                            ->countAllResults(),
+                'jumlah_temp'=>$tempModel->countAllResults()
             ]]
         );
     }

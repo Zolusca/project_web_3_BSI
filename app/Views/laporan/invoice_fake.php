@@ -65,11 +65,11 @@
     <tbody>
     <tr>
         <th scope="row">1</th>
-        <td><?= $data['dataTransaksi']->nama_produk?></td>
-        <td><?= $data['dataTransaksi']->nama_penyalur?></td>
-        <td align="right"><?= $data['dataTransaksi']->jumlah_order_produk?></td>
-        <td align="right"><?= $data['dataTransaksi']->harga_beli?></td>
-        <td align="right"><?= $data['dataTransaksi']->total_harga?></td>
+        <td><?= $data['dataTransaksi']['nama_produk']?></td>
+        <td><?= $data['dataTransaksi']['nama']?></td>
+        <td align="right"><?= $data['dataTransaksi']['jumlah_order_produk']?></td>
+        <td align="right"><?= $data['dataTransaksi']['harga_beli']?></td>
+        <td align="right"><?= $data['dataTransaksi']['total_harga']?></td>
     </tr>
     </tbody>
 
@@ -77,7 +77,7 @@
     <tr>
         <td colspan="3"></td>
         <td align="right">Subtotal $</td>
-        <td align="right"><?= $data['dataTransaksi']->total_harga?></td>
+        <td align="right"><?= $data['dataTransaksi']['total_harga']?></td>
     </tr>
     <tr>
         <td colspan="3"></td>
@@ -87,7 +87,7 @@
     <tr>
         <td colspan="3"></td>
         <td align="right">Total $</td>
-        <td align="right" class="gray"><?= $data['dataTransaksi']->total_harga + 7000?></td>
+        <td align="right" class="gray"><?= $data['dataTransaksi']['total_harga'] + 7000?></td>
     </tr>
     </tfoot>
 </table>

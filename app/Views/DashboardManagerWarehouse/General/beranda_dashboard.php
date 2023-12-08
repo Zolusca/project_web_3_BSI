@@ -13,21 +13,21 @@
         <div class="card-content"><!----card-content------>
             <div class="title-card">Jumlah Produk</div>
             <div>
-                <b>90</b>
+                <b><?= $data['jumlah_produk']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="card-content"><!----card-content------>
-            <div class="title-card">Jumlah Produk</div>
+            <div class="title-card">Dalam Pengiriman</div>
             <div>
-                <b>90</b>
+                <b><?= $data['jumlah_order']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="card-content"><!----card-content------>
-            <div class="title-card">Jumlah Produk</div>
+            <div class="title-card">Jumlah Request</div>
             <div>
-                <b>90</b>
+                <b><?= $data['jumlah_temp']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>

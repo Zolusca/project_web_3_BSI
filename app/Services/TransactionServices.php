@@ -37,7 +37,7 @@ class TransactionServices
             $dataOrder = $orders->where('id_order',$transaksiEntites->getIdOrder())
                 ->join('produk','orders.id_produk = produk.id_produk')
                 ->join('penyalur','orders.id_penyalur = penyalur.id_penyalur')
-                ->find();
+                ->asArray()->find();
 
             // pembuatan dana invoice fake
             $noInvoice = $transaksiEntites->generateInvoiceId($dataOrder);

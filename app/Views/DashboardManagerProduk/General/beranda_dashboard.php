@@ -13,21 +13,21 @@
         <div class="card-content"><!----card-content------>
             <div class="title-card">Jumlah Produk</div>
             <div>
-                <b>90</b>
+                <b><?= $data['jumlah_produk']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="card-content"><!----card-content------>
-            <div class="title-card">Jumlah Produk</div>
+            <div class="title-card">Order Temp</div>
             <div>
-                <b>90</b>
+                <b><?= $data['jumlah_new_request_temp']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="card-content"><!----card-content------>
-            <div class="title-card">Jumlah Produk</div>
+            <div class="title-card">Order Disetujui</div>
             <div>
-                <b>90</b>
+                <b><?= $data['jumlah_order_disetujui']?? ""?></b>
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -36,7 +36,6 @@
 
     <div class="container-data-above-card">
         <div>
-
         </div>
     </div>
 </div>

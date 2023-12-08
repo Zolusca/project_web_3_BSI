@@ -10,6 +10,7 @@ use App\Entities\TransaksiEntites;
 use App\Exception\DatabaseFailedInsert;
 use App\Exception\DatabaseFailedUpdate;
 use App\Libraries\PdfGenerator;
+use App\Models\Gudang;
 use App\Models\Orders;
 use App\Models\Transaksi;
 use App\Services\OrderServices;
@@ -19,9 +20,15 @@ use Config\Services;
 class FinancialManagerView extends BaseController
 {
     public function mainDashboardView(){
+        $orderModel     = new Orders(Services::getDatabaseConnection());
+        $transaksiModel = new Transaksi(Services::getDatabaseConnection());
+
         return view('DashboardManagerFinancial/General/beranda_dashboard',
             ['data'=>[
                 'user'=>['nama_user'=>session()->get('nama'),'role'=>session()->get('role')],
+                'jumlah_order'=>$orderModel->where('status_order','menunggu_persetujuan')->countAllResults(),
+                'transaksi_belum_lunas'=>$transaksiModel->where('status_transaksi','belum_lunas')->countAllResults(),
+                'transaksi_lunas'=>$transaksiModel->where('status_transaksi','lunas')->countAllResults()
             ]]
         );
     }

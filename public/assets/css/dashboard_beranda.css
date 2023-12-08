@@ -17,7 +17,37 @@
     float: right;
 }
 .container-data-above-card{
-    border: 1px solid;
+    /*border: 1px solid;*/
     margin-top: 15px;
     height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+input[type='text']{
+    border-radius: 5px;
+    background-color: white;
+    font-size: 17px;
+}
+input[type='email']{
+    border-radius: 5px;
+    background-color: white;
+    font-size: 17px;
+}
+button[type='submit']{
+    margin-top: 15px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+}
+h4{
+    text-align: center;
 }
